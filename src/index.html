@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GAME Effect</title>
+
+        <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+
+        
+        <link rel="stylesheet" href="./css/bg.css" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/game.css" />
+        <link rel="stylesheet" href="./css/music.css" />
+    </head>
+    <body>
+        <div class="cursor">
+            <img src="images/game_mouse01.png" alt />
+        </div>
+        <header id="header">
+            <h1>ARARA GAME WORLD</h1>
+            <div class="time">2023년 04월 24이 09시 30분</div>
+        </header>
+
+        <main>
+            <div class="icon_box">
+                <div class="icon1">
+                    <img src="./images/game_icon01.png" alt="게임 아이콘" />
+                    <span>MUSIC</span>
+                </div>
+                <div class="icon2">
+                    <img src="./images/game_icon02.png" alt="게임 아이콘" />
+                    <span>TETRIS</span>
+                </div>
+                <div class="icon3">
+                    <img src="./images/game_icon03.png" alt="게임 아이콘" />
+                    <span>뮤직 듣기</span>
+                </div>
+                <div class="icon4">
+                    <img src="./images/game_icon04.png" alt="게임 아이콘" />
+                    <span>뮤직 듣기</span>
+                </div>
+            </div>
+            <!-- 뮤직 플레이어 -->
+            <div class="music__wrap">
+                <div class="music__inner">
+                    <div class="music__header">
+                        <span class="left">  </span>
+                        <h2></h2>
+                        <span class="right">X</span>
+                    </div>
+                    <div class="music__contents">
+                        <div class="music__view">
+                            <div class="images">
+                                <img
+                                    src="images/music_image01.png"
+                                    alt="음악"
+                                />
+                            </div>
+                        </div>
+                        <div class="music__control">
+                            <div class="title">
+                                <h3>노래 제목</h3>
+                                <p>작곡가 이름</p>
+                            </div>
+                            <div class="progress">
+                                <div class="bar">
+                                    <audio
+                                        id="main-audio"
+                                        src="audio/1.wav"
+                                    ></audio>
+                                </div>
+                                <div class="timer">
+                                    <span class="current">0:00</span>
+                                    <span class="duration">3:32</span>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <span>
+                                    <i
+                                        class="repeat"
+                                        id="control-repeat"
+                                        title="전체 반복"
+                                    ></i>
+                                    <!-- <i class="repeat_one" id="control-repeat" title="한곡 재생"></i> -->
+                                    <!-- <i class="shuffle" id="control-repeat" title="랜덤 재생"></i> -->
+                                </span>
+                                <span>
+                                    <i
+                                        class="prev"
+                                        id="control-prev"
+                                        title="이전곡 재생"
+                                    ></i>
+                                </span>
+                                <span>
+                                    <i
+                                        class="play"
+                                        id="control-play"
+                                        title="재생"
+                                    ></i>
+                                </span>
+                                <span>
+                                    <i
+                                        class="next"
+                                        id="control-next"
+                                        title="다음 곡 재생"
+                                    ></i>
+                                </span>
+                                <span>
+                                    <i
+                                        class="list"
+                                        id="control-list"
+                                        title="재생 목록"
+                                    ></i>
+                                </span>
+                                <!-- <span class="repeat_one">반복 재생</span>
+                            <span class="shuffle">랜덤 재생</span>
+                            <span class="stop">정지</span> -->
+                            </div>
+                        </div>
+                        <div class="music__list">
+                            <h3>뮤직 리스트<a href="#" class="close"></a></h3>
+                            <ul>
+                                <!-- <li>
+                                <span class="img">
+                                    <img class="img" src="images/music_image01.png" alt="">
+                                </span>
+                                <span class="title">
+                                    <strong>1. aaa</strong>
+                                    <em>DJ Freedom</em>
+                                </span>
+                                <span class="time">3:04</span>
+                            </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="music__footer"></div>
+                </div>
+            </div>
+
+            <!-- 테트리스 -->
+            <div class="tetris__wrap">
+                <div class="tetris__header">
+                    <div class="left"></div>
+                    <div class="right">X</div>
+                </div>
+                <div class="tetris__inner">
+                    <div class="game__view">
+                        <div class="tetris__start">
+                            <div class="start_inner">
+                                <h2>TETRIS</h2>
+                                <img
+                                    src="images/tetris_srart.gif"
+                                    alt="시작 이미지"
+                                />
+                                <div class="start_btn">click to start</div>
+                            </div>
+                        </div>
+                        <!-- <div class="tetris__text"></div> -->
+                        <div class="tetris__play">
+                            <div class="view">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="tetris__end">
+                            <div class="end_inner">
+                                <h2>G A M E<br />O V E R</h2>
+                                <div class="retry_btn">R E ?</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game__desc">
+                        <div class="tetris__score">score : 0점</div>
+                        <div class="tetris__level">Lv.0</div>
+                        <div class="tetris__preview__block">
+                        </div>
+                        <div class="audio__controll__button">
+                            <svg class="play__music__play" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                            </svg>
+                            <svg class="play__music__pause" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6l4.72-4.72a.75.75 0 011.28.531V19.94a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.506-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.395C2.806 8.757 3.63 8.25 4.51 8.25H6.75z" />
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="tetris__control">
+                    <div class="tetris__control__btn__inner">
+                        <div class="tetris__control__btn1 bgmplay">
+                            <audio
+                                class="bgmPlay_music"
+                                src="audio/aespa_-_Hold_On_Tight.mp3"
+                            ></audio>
+                            <audio
+                                class="bgmover_music"
+                                src="audio/Guardian Tales BGM Game Over.mp3"
+                            ></audio>
+                        </div>
+                        <div class="tetris__control__btn2"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="info">roading...</div>
+        </footer>
+
+        <script type="module" src="main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script></script>
+    </body>
+</html>

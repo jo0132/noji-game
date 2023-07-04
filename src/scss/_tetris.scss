@@ -1,0 +1,318 @@
+@import url("https://webfontworld.github.io/cookierun/CookieRun.css");
+@mixin center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tetris__wrap {
+    @include center;
+    width: 600px;
+    height: 800px;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    background-color: rgba(12, 12, 12, 0.8);
+    box-shadow: 0 0 5px #48f97d, 1px 1px #48f97d, 0 0 50px #48f97d9a;
+    border: 3px solid #48f97d9a;
+    font-family: "CookieRun";
+    padding: 30px;
+    display: none;
+    .tetris__header {
+        display: flex;
+        justify-content: space-between;
+        .left {}
+        .right {
+            font-size: 25px;
+            font-weight: 900;
+            color: #48f97d;
+        }
+    }
+    .tetris__inner {
+        display: flex;
+        .game__view {
+            >div {
+                box-shadow: 0 0 5px #48f97d9a, 1px 1px #48f97d9a, 0 0 30px #48f97d9a;
+                border: 3px solid #48f97d9a;
+            }
+        }
+    }
+}
+.tetris__start {
+    .start_inner {
+        // margin: 50px auto 10px;
+        width: 300px;
+        height: 500px;
+        background-color: #1d252d;
+        text-align: center;
+        > h2 {
+            display: inline-block;
+            font-weight: 1000;
+            font-size: 60px;
+            margin-top: 50px;
+            color: #48f97d;
+            text-shadow: 0 0 10px #48f97d, 1px 1px #48f97d, 0 0 280px #48f97d;
+            animation: start_main 1s ease-in-out infinite alternate;
+        }
+        @keyframes start_main {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .start_btn {
+            display: inline-block;
+            font-weight: 500;
+            margin-top: 30px;
+            width: 200px;
+            height: 50px;
+            padding: 11px;
+            border: 1px solid #48f97d;
+            box-shadow: 0 0 10px #48f97d, 1px 1px #48f97d, 0 0 280px #48f97d;
+            color: #48f97d;
+        }
+        .start_btn:hover {
+            font-weight: 1000;
+            background-color: #48f97d;
+            color: #1d252d;
+        }
+    }
+}
+.tetris__end {
+    display: none;
+    .end_inner {
+        // margin: 50px auto 10px;
+        width: 300px;
+        height: 500px;
+        background-color: #1d252d;
+        text-align: center;
+        > h2 {
+            display: inline-block;
+            font-weight: 1000;
+            font-size: 60px;
+            margin-top: 50px;
+            // color: #48F97D;
+            animation: end_main 3s infinite;
+        }
+        @keyframes end_main {
+            0% {
+                color: #48f97d;
+                text-shadow: 0 0 10px #48f97d, 1px 1px #48f97d,
+                    0 0 280px #e2ffeb;
+            }
+            80% {
+                color: #48f97d;
+                text-shadow: 0 0 10px #48f97d, 1px 1px #48f97d,
+                    0 0 280px #48f97d;
+            }
+            81% {
+                color: #222;
+                text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82),
+                    -2px 0px 4px #29121a;
+            }
+            94% {
+                color: #222;
+                text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82),
+                    -2px 0px 4px #29121a;
+            }
+            95% {
+                color: #48f97d;
+                text-shadow: 0 0 10px #48f97d, 1px 1px #b2ffc9,
+                    0 0 280px #48f97d;
+            }
+            96% {
+                color: #222;
+                text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82),
+                    -2px 0px 4px #29121a;
+            }
+            97% {
+                color: #48f97d;
+                text-shadow: 0 0 10px #48f97d, 1px 1px #48f97d,
+                    0 0 280px #48f97d;
+            }
+            98% {
+                color: #48f97d;
+                text-shadow: 0 0 10px #48f97d, 1px 1px #48f97d,
+                    0 0 280px #48f97d;
+            }
+            99% {
+                color: #222;
+                text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82),
+                    -2px 0px 4px #29121a;
+            }
+            100% {
+                color: #48f97d;
+                text-shadow: 0 0 10px #48f97d, 1px 1px #48f97d,
+                    0 0 280px #48f97d;
+            }
+        }
+
+        .retry_btn {
+            display: inline-block;
+            font-weight: 500;
+            margin-top: 100px;
+            width: 200px;
+            height: 50px;
+            padding: 11px;
+            border: 1px solid #48f97d;
+            color: #48f97d;
+        }
+        .retry_btn:hover {
+            font-weight: 1000;
+            background-color: #48f97d;
+            color: #1d252d;
+        }
+    }
+}
+.tetris__play {
+    display: none;
+    .view {
+        > ul {
+            background-color: #1d252dc5;
+            border: 2px solid #ffffffb4;
+            // margin: 50px auto 10px;
+            width: 300px;
+            > li {
+                width: 100%;
+                height: 25px;
+                > ul {
+                    display: flex;
+                    > li {
+                        width: 25px;
+                        height: 25px;
+                        outline: 0.25px solid #dadada;
+                    }
+                }
+            }
+        }
+        .Tmino {
+            /* border: 6px outset #A042A2 !important; */
+            background-color: #f94848c2;
+        }
+        .Imino {
+            /* border: 6px outset #1AA9DE !important; */
+            background-color: #f99848c2;
+        }
+        .Omino {
+            /* border: 6px outset #FED01A !important; */
+            background-color: #f9ed48c2;
+        }
+        .Zmino {
+            /* border: 6px outset #EF3E4D !important; */
+            background-color: #57f948c2;
+        }
+        .Smino {
+            /* border: 6px outset #78C53E !important; */
+            background-color: #48def9c2;
+        }
+        .Jmino {
+            /* border: 6px outset #1A74C4 !important; */
+            background-color: #485af9c2;
+        }
+        .Lmino {
+            /* border: 6px outset #FF861A !important; */
+            background-color: #a948f9c2;
+        }
+    }
+}
+.game__desc {
+    width: 200px;
+    > div {
+        box-shadow: 0 0 5px #48f97d9a, 1px 1px #48f97d9a, 0 0 30px #48f97d9a;
+        border: 3px solid #48f97d9a;
+    }
+    .tetris__score {
+        width: 100%;
+        height: 40px;
+        margin: 0 auto;
+        background-color: #1d252d;
+        padding: 2px;
+        text-align: center;
+        color: #48f97d;
+        font-size: 20px;
+    }
+    .tetris__level {
+        width: 100%;
+        height: 40px;
+        margin: 0 auto;
+        background-color: #1d252d;
+        padding: 2px;
+        text-align: center;
+        color: #48f97d;
+        font-size: 20px;
+    }
+    .tetris__current__block {
+        width: 100%;
+        height: 150px;
+        margin: 0 auto;
+        background-color: #1d252d;
+        padding: 2px;
+        text-align: center;
+        color: #48f97d;
+        font-size: 20px;
+    }
+    .audio__controll__button {
+        width: 100%;
+        height: 100px;
+        margin: 0 auto;
+        background-color: #1d252d;
+        padding: 2px;
+        text-align: center;
+        color: #48f97d;
+        font-size: 20px;
+        .play__music__play {
+            margin: 20px;
+            width: 50px;
+            height: 50px;
+        }
+        .play__music__pause {
+            display: none;
+            margin: 20px;
+            width: 50px;
+            height: 50px;
+        }
+
+    }
+
+}
+.tetris__control {
+    .tetris__control__inner {
+        width: 400px;
+        height: 150px;
+        // background-color: #fff;
+        margin: 40px auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        .tetris__control__btn__inner {
+            position: absolute;
+            right: -20px;
+            top: 0;
+
+            .tetris__control__btn1 {
+                width: 60px;
+                height: 60px;
+                background-color: #ffd724;
+                border-top: 2px solid #ffeb93;
+                border-bottom: 6px solid #caa500;
+                border-radius: 50px;
+                margin: 0 30px;
+            }
+
+            .tetris__control__btn2 {
+                width: 60px;
+                height: 60px;
+                background-color: #ffd724;
+                border-top: 2px solid #ffeb93;
+                border-bottom: 6px solid #caa500;
+                border-radius: 50px;
+                margin: 10px -20px;
+            }
+        }
+    }
+}

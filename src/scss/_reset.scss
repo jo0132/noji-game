@@ -1,0 +1,46 @@
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/utoImagegothic/UtoImageGothic.css');
+@import url('https://webfontworld.github.io/leferi/LeferiPointBlack.css');
+@import url('https://webfontworld.github.io/Healthset/HealthsetGothic.css');
+@import url('https://webfontworld.github.io/locus/LocusSangsang.css');
+@import url('https://webfontworld.github.io/miryang/MYArirangGothic.css');
+@import url('https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css');
+@import url('https://webfontworld.github.io/Montserrat/Montserrat.css');
+@import url('https://webfontworld.github.io/Oswald/Oswald.css');
+@import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
+@import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
+
+
+@font-face {
+    font-family: 'Sam3KRFont';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Sam3KRFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+a {
+    text-decoration: none;
+    columns: #222;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+li,ul,ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
